@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<p th:text="'You selected ' + ${game.player1} + '.'" />
+	<p th:text="'Computer selected ' + ${game.computerPlayer} + '.'" />
+	<p th:text="'The result: ' + ${game.winner} + '.'" />
+	<p>Thanks for playing. Play again?</p>
+	<a href="/playagame?choice=rock">rock</a>
+	<a href="/playagame?choice=paper">paper</a>
+	<a href="/playagame?choice=scissors">scissors</a>
+	<a href="playagame?choice=lizard">lizard</a>
+    <a href="playagame?choice=spock">spock</a>
+</body>
+</html>
+<!-- The only minor imposition Thymeleaf makes on the HTML file is the addition of the XML
+namespace attribute and the use of Thymeleaf tag attributes. Fortunately, the
+Thymeleaf tag attributes are relatively easy to use, and the syntax for pulling the
+outcome variable out of the Spring MVC model class is just standard Spring Expression
+Language and makes the learning curve small. After developers work with Thymeleaf,
+they will soon prefer it to JSPs. -->
